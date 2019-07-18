@@ -1,0 +1,16 @@
+
+public class PatientInfo {
+
+	public static void main(String[] args) {
+		Patient Timmy = new Patient();
+		System.out.println("Patient ID: " + Timmy.getID() +
+				"\nPatientAge: " + Timmy.getAge());
+		Timmy.displayBlood();
+		
+		Patient Spike = new Patient(1337, 19, '-', "AB");
+		System.out.println("PatientID: " + Spike.getID() +
+				"\nPatient Age: " + Spike.getAge());
+		Spike.displayBlood();
+	}
+
+}

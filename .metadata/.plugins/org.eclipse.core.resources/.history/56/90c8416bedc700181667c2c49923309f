@@ -1,0 +1,42 @@
+
+public class Patient {
+	
+	private int ID_number;
+	private int age;
+	private BloodData blood_data;
+	
+	Patient(){
+		ID_number = 0;
+		age = 0;
+		blood_data = new BloodData();
+	}
+	
+	Patient(int IDf, int agef, char Rh, BloodType bloodf){
+		ID_number = IDf;
+		age = agef;
+		blood_data = new BloodData(bloodf, Rh);
+	}
+	
+	int getID(){ return ID_number;}
+	int getAge() { return age;}
+	void displayBlood() {System.out.println(blood_data.getBlood());}
+	
+	public class BloodData{
+		private BloodType blood_type;
+		private char RhFactor;
+		
+		BloodData(){
+			blood_type = BloodType.O;
+			RhFactor = '+';
+		}
+		
+		BloodData(BloodType bloodf, char Rh){
+			blood_type = bloodf;
+			RhFactor = Rh;
+		}
+		
+		String getBlood() {
+			return "Blood Type: " + blood_type + RhFactor;
+		}
+	}
+}

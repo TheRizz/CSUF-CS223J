@@ -1,0 +1,15 @@
+
+public enum RhFactor {
+	POSITIVE('+'), NEGATIVE('-');
+	
+	public char asChar() {
+		return asChar;
+	}
+	
+	private final char asChar;
+	
+	private RhFactor (char asChar) {
+		this.asChar = asChar;
+	}
+	
+}

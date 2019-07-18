@@ -1,0 +1,142 @@
+Debug file 1:
+
+age = input.nextInt();
+Error with new line stuck in input buffer after reading in next int
+added input.nextLine(); to clear the input buffer of the new line character
+
+Debug file 2:
+
+menu1.add(exit) on line 27
+Missing Semicolon at end of statement;
+changed to menu1.add(exit);
+
+menu3.add(Milwaukee);
+menu3.add(Madison);
+Both lines call variables with capital letters but the variables are defined with lower case
+change to menu3.add(milwaukee);
+change to menu3.add(madison);
+
+exit.addActionListener(this);
+throwing a compile time error, noticed actionPerformed exception was also throwing a compile time error
+added implements ActionListener to the class declaration
+
+flowmer.addActionListener(this);
+milwalkee.addActionListener(this);
+madisin.addActionListener(this);
+the variable names are spelled wrong
+change to flower.addActionListener(this);
+change to milwaukee.addActionListener(this);
+change to madison.addActionListener(this);
+
+Debug file 3:
+
+private JPanel panel[][] = new JPanel();
+declaration incorrect, must change the type so that it matches as a 2d array of JPannels
+change to private JPanel panel[][] = new JPanel[ROWS][COLS];
+
+since we have an array of JPannels now,  but we aren't able to call the contents inside then we need to insert a new jpanel into each cell
+add panel[x][y] = new JPanel(); before we access it on line 25
+
+Debug file 4:
+
+setLayout(flow)
+missing a semicolon
+setLayout(flow);
+
+payMethod.addItemLisener(payMethod);
+should change the method to .addItemListener and change the argument to this
+payMethod.addItemListener(this);
+
+public void itemStateChanged()
+add argument to the declaration
+public void itemStateChanged(ItemEvent[] list)
+
+if(source = payMethod)
+the if statement isn't comparing, its setting equals, change to ==
+if(source == payMethod)
+
+feePct = fees[x];
+x isn't defined, swap x with fee
+feePct = fees[fee];
+
+Debug file 5:
+
+itemStatechanged spelled incorrectly and initialized incorrectly
+public void itemStatechanged(ItemEvent[] list)
+change to itemStateChanged(ItemEvent list)
+
+pizzaBox.addItemListener();
+add a variable to to the call
+pizzaBox.addItemListener(this);
+
+pizzaBox.addItem(cheese);
+pizzaBox.addItem(sausage);
+declared as variables but we want to declare them as strings
+pizzaBox.addItem("cheese");
+pizzaBox.addItem("sausage");
+
+add(pizzabox);
+variable name spelled incorrectly
+change to add(pizzaBox);
+
+frame.setVisible();
+missing variable for the method call
+frame.setVisible(true);
+
+Object source = list.getSource;
+getSource isn't called with parenthesis
+add parenthesis Object source = list.getSource();
+
+if(source = pizzaBox)
+if statement not called as a comparison
+change to if(source == pizzaBox)
+
+Debug file 6:
+
+JButton source = e.getSource();
+change the data type to Object
+Object source = e.getSource();
+
+show( getContentPane(), "Panelb");
+show( getContentPane(), "Panela");
+show can't be called, must call the card layout
+cardlayout.next( getContentPane());
+cardlayout.previous(getContentPane());
+
+private JPanel buttonsPanel = new JLabel();
+change the initialization to a JPanel
+private JPanel buttonsPanel = new JPanel();
+
+next.addActionListener();
+prev.addActionListener();
+add a parameter to the action listeners
+next.addActionListener(this);
+prev.addActionListener(this);
+
+buttonsPanel.add(new JButton("2"))
+missing semicolon
+buttonsPanel.add(new JButton("2"));
+
+buttonsPanel2.add(Previous);
+variable spelled incorrectly
+change to buttonsPanel2.add(prev);
+
+Debug file 7:
+
+public FixDebug()
+change to match the class name
+public Debug()
+
+need to add action listener for coffee
+coffee.addItemListener(this);
+lemon.addItemListener(this);
+
+need to add the button to the button group
+drinkGrp.add(tea);
+
+if(source == cola && source == milk)
+statement needs to be changed to or
+if(source == cola || source == milk)
+
+
+

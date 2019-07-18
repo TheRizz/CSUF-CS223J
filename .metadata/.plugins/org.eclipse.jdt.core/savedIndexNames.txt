@@ -1,0 +1,3 @@
+INDEX VERSION 1.130+H:\School\CS223J\.metadata\.plugins\org.eclipse.jdt.core
+2494209972.index
+524152447.index
